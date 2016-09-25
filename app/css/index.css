@@ -1,0 +1,279 @@
+/* -- colors -- */
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%; }
+
+button:focus, input:focus {
+  outline: none; }
+
+.gridline {
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  height: calc(100% - 70px);
+  left: 20px;
+  margin: 0px;
+  position: absolute;
+  width: 1px;
+  z-index: 1; }
+
+.hidden {
+  display: none; }
+
+.settings-wrapper {
+  -webkit-animation-duration: 0.25s !important;
+  /* Chrome, Safari, Opera */
+  animation-duration: 0.25s !important;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  height: 200px;
+  margin: 15px 35px;
+  position: absolute;
+  right: 0px;
+  width: 250px;
+  z-index: 1000; }
+  .settings-wrapper .title {
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 10px 15px;
+    padding: 5px 0px; }
+  .settings-wrapper .settings {
+    margin: 10px 20px; }
+    .settings-wrapper .settings .button.layout {
+      background-color: #f2f2f2;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      height: 30px;
+      margin-right: 10px;
+      padding: 0px;
+      width: 30px; }
+    .settings-wrapper .settings .button.layout:last-child {
+      margin-right: 0px; }
+    .settings-wrapper .settings .button.layout.comfy {
+      background-image: url("../img/icons/comfy.svg"); }
+    .settings-wrapper .settings .button.layout.cozy {
+      background-image: url("../img/icons/cozy.svg");
+      transform: rotate(90deg); }
+    .settings-wrapper .settings .button.layout.selected {
+      background-color: #4dff88; }
+    .settings-wrapper .settings .settings-label {
+      font-size: 14px;
+      font-weight: 300;
+      margin: 0px; }
+      .settings-wrapper .settings .settings-label span {
+        color: #4dff88;
+        margin: 0px 2px; }
+
+/* -- End settings-wrapper -- */
+.settings-button {
+  background-image: url("../img/icons/settings.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  height: 50px;
+  margin: 0px;
+  margin-top: 20px;
+  position: absolute;
+  right: 20px;
+  width: 50px;
+  z-index: 999; }
+
+.site-wrapper {
+  background-color: #4dff88;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  /* -- end output-wrapper -- */ }
+  .site-wrapper .input-url-wrapper {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%; }
+    .site-wrapper .input-url-wrapper .parse {
+      background-color: #262626;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 15px 10px;
+      width: 100px; }
+    .site-wrapper .input-url-wrapper .parse:hover {
+      background-color: #333333; }
+    .site-wrapper .input-url-wrapper .input-url {
+      border: none;
+      border-radius: 4px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      color: #262626;
+      font-size: 16px;
+      margin: 0px 10px;
+      padding: 15px 10px;
+      width: 50%; }
+    .site-wrapper .input-url-wrapper .input-url:focus, .site-wrapper .input-url-wrapper .input-url:hover {
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); }
+  .site-wrapper .output-wrapper {
+    background-color: white;
+    border-radius: 4px;
+    bottom: 2.5%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    height: 95%;
+    left: 2.5%;
+    margin: 0px;
+    position: absolute;
+    width: 95%;
+    /* -- end output -- */ }
+    .site-wrapper .output-wrapper .output {
+      background-color: white;
+      border-radius: 4px;
+      display: inline-block;
+      height: 100%;
+      opacity: 0;
+      width: 100%;
+      /* -- end output-body -- */
+      /* -- end header -- */ }
+      .site-wrapper .output-wrapper .output span.green {
+        color: #4dff88; }
+      .site-wrapper .output-wrapper .output .output-body {
+        height: calc(100% - 90px);
+        margin: 0px 20px;
+        position: relative;
+        width: calc(100% - 40px);
+        /* -- end html-structure -- */ }
+        .site-wrapper .output-wrapper .output .output-body .html-structure {
+          background-color: #e6e6e6;
+          border-radius: 4px;
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+          font-family: 'Ubuntu Mono', monospace;
+          min-height: 10px;
+          padding: 20px;
+          /* -- end element-wrapper -- */ }
+          .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper {
+            display: inline-block;
+            padding: 10px 0px;
+            position: relative;
+            width: 100%;
+            z-index: 2;
+            /* -- end element -- */ }
+            .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element {
+              border-radius: 4px;
+              box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+              display: inline-block;
+              height: 42px;
+              margin: 0px;
+              /* -- attributes -- */
+              /* -- end attributes -- */ }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .attribute {
+                color: white;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                min-width: 40px;
+                padding: 10px;
+                padding-bottom: 16px;
+                position: relative; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .attribute.hidden {
+                display: inline-block; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .attribute::after {
+                color: white;
+                font-size: 10px;
+                font-weight: 400;
+                left: 10px;
+                margin-top: 14px;
+                position: absolute; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .attribute.hidden::after {
+                display: none; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .attribute:first-child {
+                border-bottom-left-radius: 4px;
+                border-top-left-radius: 4px;
+                min-width: 100px; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .attribute:last-child {
+                border-bottom-right-radius: 4px;
+                border-top-right-radius: 4px; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .classes {
+                background-color: #2aa22a; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .classes::after {
+                content: "classes"; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .id {
+                background-color: #1f7a1f; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .id::after {
+                content: "id"; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .name {
+                background-color: #71da71; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .name::after {
+                content: "name"; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .tag {
+                background-color: #004d00; }
+              .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .element .tag::after {
+                content: "tag"; }
+            .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .script-input.text, .site-wrapper .output-wrapper .output .output-body .html-structure .element-wrapper .script-input.url {
+              border: none;
+              border-radius: 4px;
+              box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+              color: #262626;
+              display: inline-block;
+              font-size: 14px;
+              line-height: 14px;
+              margin: 0px 10px;
+              padding: 13px 10px;
+              vertical-align: top; }
+        .site-wrapper .output-wrapper .output .output-body .panel {
+          height: calc(100% - 110px);
+          overflow: auto; }
+        .site-wrapper .output-wrapper .output .output-body .views {
+          height: 40px;
+          margin: 10px 0px; }
+          .site-wrapper .output-wrapper .output .output-body .views .view {
+            display: inline-block;
+            height: 100%;
+            margin: 5px 0px;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            margin: 0px; }
+      .site-wrapper .output-wrapper .output .header {
+        border-bottom: 1px solid #e6e6e6;
+        display: inline-block;
+        height: 40px;
+        margin: 20px;
+        position: relative;
+        width: calc(100% - 40px); }
+        .site-wrapper .output-wrapper .output .header .close {
+          background-image: url("../img/icons/close.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 75%;
+          cursor: pointer;
+          height: 32px;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 32px; }
+        .site-wrapper .output-wrapper .output .header .url {
+          font-weight: 300;
+          font-size: 32px;
+          line-height: 32px;
+          margin: 0px; }
+  .site-wrapper .response {
+    display: none; }
+
+/* -- end site-wrapper -- */

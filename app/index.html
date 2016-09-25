@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Testing</title>
+
+  <!-- minified styles -->
+  <!--build:css css/index.min.css-->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <!-- endbuild -->
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" type="text/css" href="css/lib/animate.css">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+
+  <!-- minified scripts -->
+  <!--build:js js/utility.min.js -->
+    <script src="js/utility.js"></script>
+  <!-- endbuild -->
+  <!--build:js js/settings.min.js -->
+    <script src="js/settings.js"></script>
+  <!-- endbuild -->
+  <!--build:js js/parse.min.js -->
+    <script src="js/parse.js"></script>
+  <!-- endbuild -->
+  <!--build:js js/output.min.js -->
+    <script src="js/output.js"></script>
+  <!-- endbuild -->
+
+  <!-- Javascript Libraries -->
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet"> <!-- font - main -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"> <!-- font - code blocks -->
+
+</head>
+
+<body>
+  <div class = "site-wrapper">
+    <div class = "input-url-wrapper">
+      <input type = "url" name = "url" placeholder = "Enter url | try: example" tabindex = "1" class = "input-url">
+      <button class = "parse" onclick = "showOutput()" tabindex = "2">Parse</button>
+    </div> <!-- End input-test-url-wrapper -->
+    <div class = "output-wrapper hidden">
+      <div class = "output">
+        <div class = "header">
+          <h1 class = "url"><span class = "green">url | </span><span class = "text">example</span></h1>
+          <div class = "close" onclick = "hideOutput()"></div>
+        </div>
+        <div class = "output-body">
+          <div class = "views">
+            <h1 class = "view">html</h1>
+          </div>
+          <div class = "settings-button"></div>
+          <div class = "settings-wrapper hidden animated zoomIn">
+            <h1 class = "title">Settings</h1>
+            <div class = "settings">
+              <button class = "button layout comfy selected" data-layout = "comfy"></button>
+              <button class = "button layout cozy" data-layout = "cozy"></button>
+              <h1 class="settings-label layout">Layout <span>Comfy</span></h1>
+            </div>
+          </div>
+          <div class = "html-structure panel"></div>
+        </div>
+      </div>
+    </div>
+    <div class = "response"></div>
+  </div> <!-- End site-wrapper -->
+</body>
+
+</html>

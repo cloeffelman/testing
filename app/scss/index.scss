@@ -1,0 +1,380 @@
+/* -- colors -- */
+$black: rgb(0, 0, 0);
+
+$blue-1: rgb(0, 0, 77);
+$blue-2: rgb(0, 51, 204);
+$blue-3: rgb(0, 102, 255);
+$blue-4: rgb(128, 179, 255);
+
+$cool-blue: rgb(0, 153, 255);
+
+$cool-green: rgb(77, 255, 136);
+$green: rgb(0, 102, 0);
+
+$green-1: rgb(0, 77, 0);
+$green-2: rgb(31, 122, 31);
+$green-3: rgb(42, 162, 42);
+$green-4: rgb(113, 218, 113);
+
+$dark-gray: rgb(38, 38, 38);
+$dark-gray_hover: rgb(51, 51, 51);
+$light-gray: rgb(230, 230, 230);
+$very-light-gray: rgb(242, 242, 242);
+
+$shadow: rgba(0, 0, 0, 0.4);
+$shadow_hover: rgba(0, 0, 0, 0.6);
+
+$white: rgb(255, 255, 255);
+$off-white: rgb(255, 255, 230);
+
+html, body{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+button:focus, input:focus{
+    outline: none;
+}
+
+
+.gridline{
+  background-color: $white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  height: calc(100% - 70px);
+  left: 20px;
+  margin: 0px;
+  position: absolute;
+  width: 1px;
+  z-index: 1;
+}
+
+.hidden{
+  display: none;
+}
+
+.settings-wrapper{
+  -webkit-animation-duration: 0.25s !important; /* Chrome, Safari, Opera */
+  animation-duration: 0.25s !important;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px $shadow;
+  height: 200px;
+  margin: 15px 35px;
+  position: absolute;
+  right: 0px;
+  width: 250px;
+  z-index: 1000;
+
+  .title{
+    border-bottom: 1px solid $very-light-gray;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 10px 15px;
+    padding: 5px 0px;
+  }
+
+  .settings{
+    margin: 10px 20px;
+
+    .button.layout{
+      background-color: $very-light-gray;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      height: 30px;
+      margin-right: 10px;
+      padding: 0px;
+      width: 30px;
+    }
+    .button.layout:last-child{
+      margin-right: 0px;
+    }
+
+    .button.layout.comfy{
+      background-image: url("../img/icons/comfy.svg");
+    }
+
+    .button.layout.cozy{
+      background-image: url("../img/icons/cozy.svg");
+      transform: rotate(90deg);
+    }
+
+    .button.layout.selected{
+      background-color: $cool-green;
+    }
+
+    .settings-label{
+      font-size: 14px;
+      font-weight: 300;
+      margin: 0px;
+
+      span{
+        color: $cool-green;
+        margin: 0px 2px;
+      }
+    }
+  }
+} /* -- End settings-wrapper -- */
+
+.settings-button{
+  background-image: url("../img/icons/settings.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  height: 50px;
+  margin: 0px;
+  margin-top: 20px;
+  position: absolute;
+  right: 20px;
+  width: 50px;
+  z-index: 999;
+}
+
+.site-wrapper{
+  background-color: $cool-green;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  .input-url-wrapper{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+
+    .parse{
+      background-color: $dark-gray;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 1px 1px 3px $shadow;
+      color: $white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 15px 10px;
+      width: 100px;
+    }
+
+    .parse:hover{
+      background-color: $dark-gray_hover;
+    }
+
+    .input-url{
+      border: none;
+      border-radius: 4px;
+      box-shadow: 1px 1px 3px $shadow;
+      color: $dark-gray;
+      font-size: 16px;
+      margin: 0px 10px;
+      padding: 15px 10px;
+      width: 50%;
+    }
+
+    .input-url:focus, .input-url:hover{
+      box-shadow: 1px 1px 3px $shadow_hover;
+    }
+  }
+
+  .output-wrapper{
+    background-color: $white;
+    border-radius: 4px;
+    bottom: 2.5%;
+    box-shadow: 0px 0px 3px $shadow;
+    height: 95%;
+    left: 2.5%;
+    margin: 0px;
+    position: absolute;
+    width: 95%;
+
+    .output{
+      background-color: $white;
+      border-radius: 4px;
+      display: inline-block;
+      height: 100%;
+      opacity: 0;
+      width: 100%;
+
+      span.green{
+        color: $cool-green;
+      }
+
+      .output-body{
+        height: calc(100% - 90px);
+        margin: 0px 20px;
+        position: relative;
+        width: calc(100% - 40px);
+
+        .html-structure{
+          background-color: $light-gray;
+          border-radius: 4px;
+          box-shadow: 0px 0px 4px $shadow;
+          font-family: 'Ubuntu Mono', monospace;
+          min-height: 10px;
+          padding: 20px;
+
+          .element-wrapper{
+            display: inline-block;
+            padding: 10px 0px;
+            position: relative;
+            width: 100%;
+            z-index: 2;
+
+            .element{
+              border-radius: 4px;
+              box-shadow: 1px 1px 3px $shadow;
+              display: inline-block;
+              height: 42px;
+              margin: 0px;
+
+              /* -- attributes -- */
+              .attribute{
+                color: $white;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                min-width: 40px;
+                padding: 10px;
+                padding-bottom: 16px;
+                position: relative;
+              }
+              .attribute.hidden{
+                display: inline-block;
+              }
+              .attribute::after{
+                color: $white;
+                font-size: 10px;
+                font-weight: 400;
+                left: 10px;
+                margin-top: 14px;
+                position: absolute;
+              }
+              .attribute.hidden::after {
+                display: none;
+              }
+              .attribute:first-child{
+                border-bottom-left-radius: 4px;
+                border-top-left-radius: 4px;
+                min-width: 100px;
+              }
+              .attribute:last-child{
+                border-bottom-right-radius: 4px;
+                border-top-right-radius: 4px;
+              }
+
+              .classes{
+                background-color: $green-3;
+              }
+              .classes::after {
+                content: "classes";
+              }
+
+              .id{
+                background-color: $green-2;
+              }
+              .id::after {
+                content: "id";
+              }
+
+              .name{
+                background-color: $green-4;
+              }
+              .name::after {
+                content: "name";
+              }
+
+              .tag{
+                background-color: $green-1;
+              }
+              .tag::after {
+                content: "tag";
+              }
+              /* -- end attributes -- */
+            } /* -- end element -- */
+
+            .script-input.text, .script-input.url{
+              border: none;
+              border-radius: 4px;
+              box-shadow: 1px 1px 3px $shadow;
+              color: $dark-gray;
+              display: inline-block;
+              font-size: 14px;
+              line-height: 14px;
+              margin: 0px 10px;
+              padding: 13px 10px;
+              vertical-align: top;
+            }
+          } /* -- end element-wrapper -- */
+        } /* -- end html-structure -- */
+
+        .panel{
+          height: calc(100% - 110px);
+          overflow: auto;
+        }
+
+        .views{
+          height: 40px;
+          margin: 10px 0px;
+
+          .view{
+            display: inline-block;
+            height: 100%;
+            margin: 5px 0px;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            margin: 0px;
+          }
+        }
+      } /* -- end output-body -- */
+
+      .header{
+        border-bottom: 1px solid $light-gray;
+        display: inline-block;
+        height: 40px;
+        margin: 20px;
+        position: relative;
+        width: calc(100% - 40px);
+
+        .close{
+          background-image: url("../img/icons/close.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 75%;
+          cursor: pointer;
+          height: 32px;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 32px;
+        }
+
+        .url{
+          font-weight: 300;
+          font-size: 32px;
+          line-height: 32px;
+          margin: 0px;
+        }
+      } /* -- end header -- */
+    } /* -- end output -- */
+  } /* -- end output-wrapper -- */
+
+  .response{
+    display: none;
+  }
+} /* -- end site-wrapper -- */
